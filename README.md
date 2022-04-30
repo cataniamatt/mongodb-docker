@@ -186,7 +186,7 @@ variable = [
 db.collection_name.insert(variable)
 ```
 
-### Queries and updates
+### Queries, updates and deletes
 To query all documents in a collection
 ```
 db.collection_name.find().pretty()
@@ -198,4 +198,14 @@ To query from a database, insert the query within the find() function. A compreh
 To update a document:
 ```
 db.container_name.update({query}, {change})
+```
+
+To delete one document matching the query:
+```
+db.container_name.deleteOne({query})
+```
+
+To delete all documents matching the query:
+```
+db.container_name.deleteMany({query})
 ```
