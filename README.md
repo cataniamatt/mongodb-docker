@@ -1,5 +1,5 @@
 # MongoDB Docker Container Step-by-Step
-This is a guide for creating a simple MongoDB databasem with some collections and documents, inside a Docker container. In MongoDB, a collection is similar to a table in SQL while documents are similar to rows in tables.
+This is a guide for creating a simple MongoDB database, with some collections and documents, inside a Docker container. In MongoDB, a collection is similar to a table in SQL while documents are similar to rows in tables.
 
 ![MongoDB Logo](https://github.com/cataniamatt/mongodb-docker/blob/main/mongodb.png)
 
