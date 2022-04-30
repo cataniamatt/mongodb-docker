@@ -51,6 +51,7 @@ Creating volume "mongodb-docker_data" with default driver
 Creating mongodb       ... done
 Creating mongo-express ... done
 ```
+
 ### Volumes
 In this example, a named volume called "data" will be used to save the data inside the MongoDB database onto the host machine so that it is not lost if the container is deleted. 
 
@@ -67,9 +68,18 @@ Docker supports three types of volumes:
 
 If a named volume is used, the volume should be created at the services level as can be seen in the sample "docker_compose.yml" file above.
 
+## Mongo Express
+At this stage, MongoDB and Mongo Express are both running on the localhost. The MongoDB database can be accessed using Mongo Express by going to the following address in a browser:
+```
+localhost:8081
+```
+or
+```
+127.0.0.1:8081
+```
+The 8081 is the host port that was mapped to port 8081 of the container, this is the default port used by Mongo Express.
 
-
-
+## Mongo Shell
 
 Start an interactive shell for the mongodb container using the following command:
 docker exec -it container_name bash
