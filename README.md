@@ -6,7 +6,7 @@ This is a guide for creating a simple MongoDB database with some collections and
 In this guide, a MongoDB database will be created as a Docker container. Mongo Express, which is a web-based adiministrative tool to manage MongoDB databases, will also be installed as another Docker container. 
 
 ## Creating the Docker containers
-The code below is from the "docker-compose.yml" file that will be used to create both containers. Both containers will use the latest images of MongoDB and Mongo Express that are found on Docker Hub. These will be downloaded from Docker Hub and used to create the containers when Docker Compose is started.
+The code below is from the "docker-compose.yml" file that will be used to create both containers. Both containers will use the latest images of MongoDB and Mongo Express that are found on Docker Hub. These will be downloaded from Docker Hub and used to create the containers when Docker Compose is started. 
 ```
 services:
   mongodb:
@@ -39,10 +39,16 @@ networks:
     name: mongodb_network
 ```
 
-### Volumes
-A named volume called "data" will be used to save the data inside the MongoDB database onto the host machine so that it is not lost if the container is deleted. 
+Once the "docker_compose.yml" file is complete with the desired containers and configurations,the containers can be started by using the following command:
+```
+docker-compose up -d
+```
+The '-d' tag is used to run all the containers in the detached mode, meaning in the background.
 
-Docker support three types of volumes:
+### Volumes
+In this example, a named volume called "data" will be used to save the data inside the MongoDB database onto the host machine so that it is not lost if the container is deleted. 
+
+Docker supports three types of volumes:
 * Host volumes
     * The path on the host is defined by the user.
     * Syntax: /path/on/host:/path/in/container
@@ -50,10 +56,13 @@ Docker support three types of volumes:
     * Docker handles the storage location but its difficult to reuse by multiple containers. Only the path in the container has to be specified.
     * Syntax: /path/in/container
 * Named volumes
-    * Similar to anonymous volumes but can be given a name so that they can be      referred to by multiple containers.
+    * Similar to anonymous volumes but can be given a name so that they can be referred to by multiple containers.
     * Syntax: volume_name:/path/in/container
 
 If a named volume is used, the volume should be created at the services level as can be seen in the sample "docker_compose.yml" file above.
+
+
+
 
 
 Start an interactive shell for the mongodb container using the following command:
