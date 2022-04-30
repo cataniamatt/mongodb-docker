@@ -190,4 +190,4 @@ To view all documents in a collection
 ```
 db.collection_name.find().pretty()
 ```
-The pretty() function is used to output the documents in a more readable format.
+The pretty() function is used to output the documents in a more readable format. To query from the database, insert the query within the find() function.
