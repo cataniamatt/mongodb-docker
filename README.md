@@ -209,3 +209,4 @@ To delete all documents matching the query:
 ```
 db.container_name.deleteMany({query})
 ```
+This is dangerous because if a query is not specified, all documents will be deleted from the collection.
