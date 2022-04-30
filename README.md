@@ -4,6 +4,8 @@ This is a guide for creating a simple MongoDB database with some collections and
 ![MongoDB Logo](https://github.com/cataniamatt/mongodb-docker/blob/main/mongodb.png)
 
 In this guide, a MongoDB database will be created as a Docker container. Mongo Express, which is a web-based adiministrative tool to manage MongoDB databases, will also be installed as another Docker container. 
+
+The code below is from the "docker-compose.yml" file that will be used to create both containers. Both containers will use the latest images for MongoDB and Mongo Express that are found on Docker Hub. These will be downloaded from Docker Hub and used to create the containers when Docker Compose is started. A volume called "data" will be used to save the data inside the MongoDB database onto the machine so that it is not lost if the container is deleted.
 ```
 services:
   mongodb:
