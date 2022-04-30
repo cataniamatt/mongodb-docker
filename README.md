@@ -41,16 +41,16 @@ networks:
 
 Once the "docker_compose.yml" file is complete with the desired containers and configurations,the containers can be started by using the following command:
 ```
-docker-compose up -d
+docker-compose up
 ```
+The '-d' tag is used to run all the containers in the detached mode, meaning in the background.
+
 ```
 Creating network "mongodb_network" with the default driver
 Creating volume "mongodb-docker_data" with default driver
 Creating mongodb       ... done
 Creating mongo-express ... done
 ```
-The '-d' tag is used to run all the containers in the detached mode, meaning in the background.
-
 ### Volumes
 In this example, a named volume called "data" will be used to save the data inside the MongoDB database onto the host machine so that it is not lost if the container is deleted. 
 
