@@ -3,6 +3,39 @@ This is a guide for creating a simple MongoDB database with some collections and
 
 ![MongoDB Logo](https://github.com/cataniamatt/mongodb-docker/blob/main/mongodb.png)
 
+In this guide, a MongoDB database will be created as a Docker container. Mongo Express, which is a web-based adiministrative tool to manage MongoDB databases, will also be installed as another Docker container. 
+```
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - data:/data
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    volumes:
+      - data:/data
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+volumes:
+  data: {}
+
+networks:
+  default:
+    name: mongodb_network
+```
+
 Start an interactive shell for the mongodb container using the following command:
 docker exec -it container_name bash
 "-i" tag interactive mode
