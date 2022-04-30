@@ -133,7 +133,7 @@ use database_name
 
 To view current database being used:
 ```
-db.getName();
+db
 ```
 
 To delete a database, switch to the database and do:
@@ -145,7 +145,7 @@ To create a collection:
 ```
 db.createCollection("collection_name")
 ```
-or use the following to set a custom configuration to the collection:
+OR
 ```
 db.createCollection("collection_name", {
     capped: <boolean>,
@@ -153,6 +153,7 @@ db.createCollection("collection_name", {
     max: 3000
 })
 ```
+This is used for creating a collection with a custom configuration.
 
 To view the configuration and statistics of a collection:
 ```
