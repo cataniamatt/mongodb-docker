@@ -187,3 +187,4 @@ To view all documents in a collection
 ```
 db.collection_name.find().pretty()
 ```
+The pretty() function is used to output the documents in a more readable format.
