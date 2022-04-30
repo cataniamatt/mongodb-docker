@@ -91,6 +91,7 @@ Once inside the container, execute the following command to open a MongoDB Shell
 mongo mongodb://localhost:27017 -u admin -p password
 ```
 
+The MongoDB commands can now be used in the shell to interact with the database.
 ```
 root@ff49ab8bc52e:/# mongo mongodb://localhost:27017 -u admin -p password
 Welcome to the MongoDB shell.
