@@ -119,7 +119,7 @@ The server generated these startup warnings when booting:
 ```
 
 ## MongoDB Shell Commands
-All MongoDB shell commands can be viewed by on the MongoDB documents website [here](https://www.mongodb.com/docs/manual/reference/mongo-shell/). Below are some of the most commonly used commands.
+All MongoDB shell commands can be found within the MongoDB documentation [here](https://www.mongodb.com/docs/manual/reference/mongo-shell/). Below are some of the most commonly used commands.
 
 ### Databases
 To view all databases:
@@ -190,4 +190,6 @@ To view all documents in a collection
 ```
 db.collection_name.find().pretty()
 ```
-The pretty() function is used to output the documents in a more readable format. To query from the database, insert the query within the find() function.
+The pretty() function is used to output the documents in a more readable format. 
+
+To query from a database, insert the query within the find() function. A comprehensive list of all queries possible can be found in the MongoDB documentation [here](https://www.mongodb.com/docs/v4.2/reference/method/db.collection.find/).
