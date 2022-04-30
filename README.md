@@ -186,7 +186,7 @@ variable = [
 db.collection_name.insert(variable)
 ```
 
-### Queries
+### Queries and updates
 To query all documents in a collection
 ```
 db.collection_name.find().pretty()
@@ -194,3 +194,8 @@ db.collection_name.find().pretty()
 The pretty() function is used to output the documents in a more readable format. 
 
 To query from a database, insert the query within the find() function. A comprehensive list of all queries possible can be found in the MongoDB documentation [here](https://www.mongodb.com/docs/v4.2/reference/method/db.collection.find/).
+
+To update a document:
+```
+db.container_name.update({query}, {change})
+```
