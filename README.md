@@ -117,3 +117,72 @@ The server generated these startup warnings when booting:
 ---
 >
 ```
+
+## MongoDB Shell Commands
+All MongoDB shell commands can be viewed by on the MongoDB documents website [here](https://www.mongodb.com/docs/manual/reference/mongo-shell/). Below are some of the most commonly used commands.
+
+To view all databases:
+```
+show dbs
+```
+
+To create a new database:
+```
+use database_name
+```
+
+To view current database being used:
+```
+db.getName();
+```
+
+To delete a database, switch to the database and do:
+```
+db.dropDatabase()
+```
+
+To create a collection:
+```
+db.createCollection("collection_name")
+```
+or use the following to set a custom configuration to the collection:
+```
+db.createCollection("collection_name", {
+    capped: <boolean>,
+    size: 6142800,
+    max: 3000
+})
+```
+
+To view the configuration and statistics of a collection:
+```
+db.collection_name.stats()
+```
+
+To view all collections:
+```
+show collections
+```
+
+To insert documents into a collection, first create a variable that holds a JSON object/s in it and then use the "insert" function with it. MongoDB will automatically assign an object ID to each object. No schema is required unlike SQL, MongoDB will automatically assign the data type.
+```
+variable = [
+    {
+        "name": "John",
+        "surname": "Doe",
+        "age": 22       
+    },
+    {
+        "name": "Jane",
+        "surname": "Doe",
+        "age": 21
+    }
+]
+
+db.collection_name.insert(variable)
+```
+
+To view all documents in a collection
+```
+db.collection_name.find().pretty()
+```
