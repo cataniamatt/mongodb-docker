@@ -79,14 +79,40 @@ or
 ```
 The 8081 is the host port that was mapped to port 8081 of the container, this is the default port used by Mongo Express.
 
-## Mongo Shell
-A MongoDB database can also be managed using the Mongo Shell directly on the container. To do this, an interactivate shell for the MongoDB container must first be started using:
+## MongoDB Shell
+A MongoDB database can also be managed using the MongoDB Shell directly on the container. To do this, an interactivate shell for the MongoDB container must first be started using:
 ```
 docker exec -it container_name bash
 ```
 The "-t" tag starts a pseudo terminal while the "-i" tag allows for interaction with the pseudo terminal. Together they allow commands to be executed on the bash shell that is started.
 
-Once inside the container, execute the following command to open a Mongo Shell for the database.
+Once inside the container, execute the following command to open a MongoDB Shell for the database.
 ```
 mongo mongodb://localhost:27017 -u admin -p password
+```
+
+```
+root@ff49ab8bc52e:/# mongo mongodb://localhost:27017 -u admin -p password
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+---
+The server generated these startup warnings when booting:
+        2022-04-30T16:35:23.983+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+>
 ```
