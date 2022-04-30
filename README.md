@@ -38,6 +38,8 @@ networks:
   default:
     name: mongodb_network
 ```
+
+### Volumes
 A named volume called "data" will be used to save the data inside the MongoDB database onto the host machine so that it is not lost if the container is deleted. 
 
 Docker support three types of volumes:
@@ -50,6 +52,9 @@ Docker support three types of volumes:
 * Named volume
     * Similar to anonymous volumes but can be given a name so that they can be      referred to by multiple containers.
     * Syntax: volume_name:/path/in/container
+
+If a named volume is used, the volume should be created at the services level as can be seen in the sample "docker_compose.yml" file above.
+
 
 Start an interactive shell for the mongodb container using the following command:
 docker exec -it container_name bash
