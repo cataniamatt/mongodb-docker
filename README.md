@@ -80,12 +80,13 @@ or
 The 8081 is the host port that was mapped to port 8081 of the container, this is the default port used by Mongo Express.
 
 ## Mongo Shell
-
-Start an interactive shell for the mongodb container using the following command:
+A MongoDB database can also be managed using the Mongo Shell directly on the container. To do this, an interactivate shell for the MongoDB container must first be started using:
+```
 docker exec -it container_name bash
-"-i" tag interactive mode
-"-t" tag
- 
-On the mongodb container run the following command to access the database
-mongo mongodb://localhost:27017 -u admin -p password
+```
+The "-t" tag starts a pseudo terminal while the "-i" tag allows for interaction with the pseudo terminal. Together they allow commands to be executed on the bash shell that is started.
 
+Once inside the container, execute the following command to open a Mongo Shell for the database.
+```
+mongo mongodb://localhost:27017 -u admin -p password
+```
