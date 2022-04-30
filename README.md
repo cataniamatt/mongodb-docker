@@ -41,12 +41,12 @@ networks:
 A named volume called "data" will be used to save the data inside the MongoDB database onto the host machine so that it is not lost if the container is deleted. 
 
 Docker support three types of volumes:
-* Host volume - /path/on/host:/path/in/container
-    The path is defined on the host is defined by the user.
-* Anonymous volume - /path/in/container
-    Docker handles the storage location but its difficult to reuse.
-* Named volume - volume_name:/path/in/container
-    Similar to anonymous volumes but can be given a name so that they can be referred to by multiple containers.
+* Host volume - 
+    The path on the host is defined by the user. Syntax: /path/on/host:/path/in/container
+* Anonymous volume - 
+    Docker handles the storage location but its difficult to reuse by multiple containers. Only the path in the container has to be specified. Syntax: /path/in/container
+* Named volume - 
+    Similar to anonymous volumes but can be given a name so that they can be referred to by multiple containers. Syntax: volume_name:/path/in/container
 
 Start an interactive shell for the mongodb container using the following command:
 docker exec -it container_name bash
