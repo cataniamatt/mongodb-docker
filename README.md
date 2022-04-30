@@ -186,7 +186,8 @@ variable = [
 db.collection_name.insert(variable)
 ```
 
-To view all documents in a collection
+### Queries
+To query all documents in a collection
 ```
 db.collection_name.find().pretty()
 ```
