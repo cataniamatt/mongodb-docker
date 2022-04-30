@@ -43,6 +43,12 @@ Once the "docker_compose.yml" file is complete with the desired containers and c
 ```
 docker-compose up -d
 ```
+```
+Creating network "mongodb_network" with the default driver
+Creating volume "mongodb-docker_data" with default driver
+Creating mongodb       ... done
+Creating mongo-express ... done
+```
 The '-d' tag is used to run all the containers in the detached mode, meaning in the background.
 
 ### Volumes
